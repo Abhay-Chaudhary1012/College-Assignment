@@ -54,6 +54,35 @@
             flex: 1;
             padding: 20px;
         }
+        .login-container {
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+            margin: auto;
+            margin-top: 50px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 <body>
@@ -75,8 +104,30 @@
             <a href="#">CIVIL</a>
         </div>
         <div class="right-frame">
-            <p>Welcome to the College Bookstore. Here you can find books related to various disciplines. Click on the categories on the left to explore.</p>
+            <div class="login-container">
+                <h2>Login Page</h2>
+                <input type="text" id="username" placeholder="User Name" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button onclick="validateLogin()">Submit</button>
+                <button type="reset">Reset</button>
+                <p id="error-message" style="color: red;"></p>
+            </div>
         </div>
     </div>
+
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var errorMessage = document.getElementById("error-message");
+            
+            if (username === "admin" && password === "password123") {
+                alert("Login successful!");
+                errorMessage.textContent = "";
+            } else {
+                errorMessage.textContent = "Invalid username or password";
+            }
+        }
+    </script>
 </body>
 </html>
