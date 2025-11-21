@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Bookstore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .top-frame {
+            background: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .top-frame h1 {
+            margin: 0;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: #005bb5;
+            padding: 10px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+        }
+        .left-frame {
+            width: 20%;
+            background: #f4f4f4;
+            padding: 10px;
+        }
+        .left-frame a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .right-frame {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-frame">
+        <h1>College Bookstore</h1>
+    </div>
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Login</a>
+        <a href="#">Registration</a>
+        <a href="#">Catalogue</a>
+        <a href="#">Cart</a>
+    </div>
+    <div class="container">
+        <div class="left-frame">
+            <a href="#">CSE</a>
+            <a href="#">ECE</a>
+            <a href="#">EEE</a>
+            <a href="#">CIVIL</a>
+        </div>
+        <div class="right-frame">
+            <p>Welcome to the College Bookstore. Here you can find books related to various disciplines. Click on the categories on the left to explore.</p>
+        </div>
+    </div>
+</body>
+</html>
